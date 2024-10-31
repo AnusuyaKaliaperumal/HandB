@@ -1,0 +1,87 @@
+[
+    {
+        "model_id": 5,
+        "price_gbp": 468,
+        "weight_kg": 11.5
+    },
+    {
+        "model_id": 15,
+        "price_gbp": 500,
+        "weight_kg": 9.4
+    },
+    {
+        "model_id": 17,
+        "price_gbp": 530,
+        "weight_kg": 7.9
+    },
+    {
+        "model_id": 9,
+        "price_gbp": 720,
+        "weight_kg": 10.0
+    },
+    {
+        "model_id": 10,
+        "price_gbp": 720,
+        "weight_kg": 11.0
+    },
+    {
+        "model_id": 2,
+        "price_gbp": 800,
+        "weight_kg": 7.8
+    },
+    {
+        "model_id": 14,
+        "price_gbp": 837,
+        "weight_kg": 8.2
+    },
+    {
+        "model_id": 7,
+        "price_gbp": 858,
+        "weight_kg": 16.0
+    },
+    {
+        "model_id": 18,
+        "price_gbp": 899,
+        "weight_kg": 11.3
+    },
+    {
+        "model_id": 1,
+        "price_gbp": 936,
+        "weight_kg": 13.5
+    },
+    {
+        "model_id": 12,
+        "price_gbp": 980,
+        "weight_kg": 14.0
+    },
+    {
+        "model_id": 13,
+        "price_gbp": 1040,
+        "weight_kg": 15.3
+    },
+    {
+        "model_id": 4,
+        "price_gbp": 1053,
+        "weight_kg": 14.0
+    },
+    {
+        "model_id": 16,
+        "price_gbp": 1210,
+        "weight_kg": 15.9
+    },
+    {
+        "model_id": 11,
+        "price_gbp": 1499,
+        "weight_kg": 7.5
+    },
+    {
+        "model_id": 20,
+        "price_gbp": 1509,
+        "weight_kg": 16.6
+    },
+    {
+        "model_id": 6,
+        "price_gbp": 2496,
+        "weight_kg": 8.0
+    }
+]
