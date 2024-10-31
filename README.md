@@ -41,9 +41,9 @@ Write a function or method that adds a new column called `price_per_weight` to e
    #### Output File:transformed_bicycles.json
 
 
-##Summary of the Python Scripts
+## Summary of the Python Scripts
 
-###Step1.py
+### Step1.py
 #### 	Main Data Flow:
 •	The script reads bike data from a JSON file (bike_data.json).
 •	It processes this data to remove duplicates and entries missing essential fields (model_id, price_gbp, weight_kg, and in_stock).
