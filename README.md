@@ -4,7 +4,7 @@ The Bicycle Inventory Data Processing project aims to assess and manipulate bicy
 ## Project Details
 ### Input->>>bike_data.json
 
-The below gives details about the Python script, input and output file names for each given challenges 
+The below ection gives details about the Python script, input and output file names for each given challenges 
 
 ### 1. Data Cleanup
 Write a function or method that removes or quarantines rows that don't adhere to the expected data structure of constraints. Make practical assumptions regarding data structure and constraints. This function or method should always be called before other data manipulation functions to ensure validity of data.
