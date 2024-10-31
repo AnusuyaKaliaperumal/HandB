@@ -1,8 +1,8 @@
-#Bicycle Inventory Project
-##Overview
+# Bicycle Inventory Project
+## Overview
 The Bicycle Inventory Data Processing project aims to assess and manipulate bicycle inventory data stored in a JSON format. It focuses on various data engineering tasks to ensure the integrity and usability of the dataset, which includes attributes like model IDs, prices, weights, and stock availability of bicycles.
-##Project Details
-###Input->>>bike_data.json
+## Project Details
+### Input->>>bike_data.json
 
 ### 1. Data Cleanup
 Write a function or method that removes or quarantines rows that don't adhere to the expected data structure of constraints. Make practical assumptions regarding data structure and constraints. This function or method should always be called before other data manipulation functions to ensure validity of data.
@@ -10,7 +10,7 @@ Write a function or method that removes or quarantines rows that don't adhere to
   Input File:bike_data.json
   Output File:cleaned_data.json
 
-###2. Filter according to requirements
+### 2. Filter according to requirements
 Write a function method that filters the bicycles based on a specific requirement. Your function should return the full list of columns and rows which match the requirements.
 The requirements are as follows - 
 - Type of bike must be **Mountain Bike**
