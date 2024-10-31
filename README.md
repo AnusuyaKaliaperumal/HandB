@@ -21,9 +21,15 @@ The requirements are as follows -
    #### Output File:filtered_bikes.json
 ### 3. Count per Brand
 Write a function or method that counts the number of each brand. Your function should return a data structure with **brand** as keys and the count of that brand as values.
-   #### Python Script:Step2.py
+   #### Python Script:Step3.py
    #### Input File: cleaned_data.jon
    #### Output File:brand-counts.json
+
+### 4. Sort bicycles by price followed by weight
+Write a function or method that sorts the list of records by **price_gbp** and then by **weight_kg** in ascending order. Your function should return a data structure containing **model_id**, **price_gbp** and **weight_kg** as keys, along with their corresponding values
+   #### Python Script:Step4.py
+   #### Input File: cleaned_data.jon
+   #### Output File:sorted_bicycles.json
 
 
     
