@@ -1,3 +1,8 @@
-
+Flask API Project
 Overview
-The Bicycle Inventory Data Processing project aims to assess and manipulate bicycle inventory data stored in a JSON format. It focuses on various data engineering tasks to ensure the integrity and usability of the dataset, which includes attributes like model IDs, prices, weights, and stock availability of bicycles.
+This project is a Flask API that connects to a PostgreSQL database and exposes endpoints for data retrieval.
+
+Setup
+Clone the repository:
+git clone https://github.com/muyiwao/APIPython.git
+cd APIPython
