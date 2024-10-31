@@ -31,5 +31,11 @@ Write a function or method that sorts the list of records by **price_gbp** and t
    #### Input File: cleaned_data.jon
    #### Output File:sorted_bicycles.json
 
+### 5. Transform - price/weight
+Write a function or method that adds a new column called `price_per_weight` to each bicycle record. This column should represent the price of the bicycle divided by its weight. Your function should return updated list of records including the new `price_per_weight` column.
+
+   #### Python Script:Step4.py
+   #### Input File: cleaned_data.jon
+   #### Output File:transformed_bicycles.json
 
     
