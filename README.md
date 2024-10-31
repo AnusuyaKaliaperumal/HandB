@@ -40,4 +40,23 @@ Write a function or method that adds a new column called `price_per_weight` to e
    #### Input File: cleaned_data.jon
    #### Output File:transformed_bicycles.json
 
+
+##Summary of the Python Scripts
+
+Step1.py
+	Main Data Flow:
+•	The script reads bike data from a JSON file (bike_data.json).
+•	It processes this data to remove duplicates and entries missing essential fields (model_id, price_gbp, weight_kg, and in_stock).
+•	The cleaned data is then saved to another JSON file (cleaned_data.json).
+	Key Functions:
+•	clean_bike_data(data): Goes through each entry in the data list and checks for required fields. It removes any bikes missing these fields 
+•	or with duplicate model_ids, adding only unique and valid entries to a final list.
+•	read_data_from_file(file_path): Reads JSON data from a specified file path. If the file doesn’t exist, it logs an error and raises a FileNotFoundError. If JSON decoding fails, it logs that too.
+•	write_data_to_file(data, file_path): Writes the cleaned data to the specified JSON file with proper formatting. If an I/O error occurs, it logs and raises the error.
+	Logging and Error Handling:
+•	The script uses logging to track progress and catch errors. This includes successful reads/writes and specific issues like missing files or JSON format errors.
+	Execution:
+•	The main function coordinates these steps, defining the input and output file paths and managing the cleaning pipeline. It ensures errors are logged if anything goes wrong, making debugging straightforward.
+
+
     
