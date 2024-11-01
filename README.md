@@ -129,3 +129,30 @@ Finally, it prints a confirmation message indicating that the sorted bicycles ha
 
 #### if __name__ == "__main__":
 This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
+
+### Step5.py
+
+#### transform_price_per_weight(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+This function takes a list of dictionaries (representing bicycle data) as input.
+It initializes an empty list updated_bikes to hold the transformed entries.
+For each bicycle entry in the input data:
+It creates a copy of the entry to avoid modifying the original data.
+It retrieves the weight_kg and price_gbp for the bicycle.
+If the weight is greater than zero, it calculates price_per_weight by dividing the price by the weight. If the price is missing, it assigns None.
+If the weight is not valid (i.e., zero or missing), it sets price_per_weight to None.
+The updated entry is appended to the updated_bikes list.
+Finally, the function returns the list of transformed bicycles.
+
+#### write_data_to_file(data: List[Dict[str, Any]], output_file: str) -> None:
+This function writes the transformed bicycle data (a list of dictionaries) to a specified JSON file, formatting it with an indentation of 2 spaces for readability.
+
+#### main() -> None:
+This is the main function that coordinates the script's execution.
+It defines the paths for the input and output files.
+It attempts to read the cleaned data from cleaned_data.json. If the file is not found or contains invalid JSON, it logs an error message and exits the function.
+If the data is successfully loaded, it calls the transform_price_per_weight function to calculate the price per weight for each bicycle.
+The transformed data is then saved to transformed_bicycles.json.
+Finally, it logs an informational message confirming the successful writing of the transformed data.
+
+####if __name__ == "__main__":
+This line checks if the script is being executed as the main module and calls the main() function to initiate the processing.
