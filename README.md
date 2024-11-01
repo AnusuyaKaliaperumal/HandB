@@ -195,6 +195,9 @@ Verifies the count of specific model_ids in the sorted output, ensuring that the
 ## Containerization
 
 ###Script-->Dockerfile
+The below objectives have been covered by using Docker and also attached the screenshot of the results in Linux Shell(Gitbash)
+The project should work on common Linux distributions and/or OSX.
+- If the project requires external platform dependencies, they should be available as a Docker container so the project can be easily tested.
 
 
 ## Best Practices Implemented
