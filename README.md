@@ -58,5 +58,31 @@ Write a function or method that adds a new column called `price_per_weight` to e
 #### 	Execution:
 •	The main function coordinates these steps, defining the input and output file paths and managing the cleaning pipeline. It ensures errors are logged if anything goes wrong, making debugging straightforward.
 
+### Step2.py
+The script is designed to read a JSON file containing bicycle inventory data, filter the data for specific criteria related to mountain bikes, and then write the filtered results to a new JSON file. It consists of the following key functions:
 
-    
+####read_data_from_file(input_file: str) -> List[Dict[str, Any]]:
+This function takes a file path as input and attempts to read data from the specified JSON file.
+It uses the json library to load the data into a Python list of dictionaries.
+If the file is not found or if the content is not valid JSON, it handles the exceptions and returns an empty list.
+
+#### filter_mountain_bikes(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+This function filters the input data to extract only those entries that represent mountain bikes.
+It checks three conditions for each bike:
+The bike's type must be "Mountain Bike."
+The price must be less than or equal to £1000.
+The bike must be in stock (i.e., in_stock is True).
+It returns a list of dictionaries representing the filtered mountain bikes.
+
+#### write_data_to_file(data: List[Dict[str, Any]], output_file: str) -> None:
+This function writes the provided data (a list of dictionaries) to a specified JSON file.
+The data is formatted with an indentation of 4 spaces for readability.
+
+#### main() -> None:
+This is the main function of the script that orchestrates the execution.
+It specifies the input and output file paths.
+It reads the cleaned data from cleaned_data.json, filters the mountain bikes using the filter_mountain_bikes function, and writes the filtered data to filtered_bikes.json.
+Finally, it prints a confirmation message indicating that the filtering operation has been completed.
+
+#### if __name__ == "__main__":
+This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
