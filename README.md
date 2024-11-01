@@ -127,5 +127,5 @@ The function attempts to read the cleaned data from cleaned_data.json. If the fi
 Once the data is successfully loaded, it calls the sort_bicycles function to obtain the sorted list and then writes this data to sorted_bicycles.json.
 Finally, it prints a confirmation message indicating that the sorted bicycles have been successfully written to the output file.
 
-####if __name__ == "__main__":
+#### if __name__ == "__main__":
 This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
