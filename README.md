@@ -87,7 +87,7 @@ Finally, it prints a confirmation message indicating that the filtering operatio
 #### if __name__ == "__main__":
 This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
 
-###Step3.py
+### Step3.py
 
 #### count_per_brand(data: List[Dict[str, Any]]) -> Dict[str, int]:
 This function takes a list of dictionaries (representing bicycle data) as input and counts the occurrences of each brand.
