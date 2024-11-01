@@ -198,6 +198,26 @@ Verifies the count of specific model_ids in the sorted output, ensuring that the
 The below objectives have been covered by using Docker and also attached the screenshot of the results in Linux Shell(Gitbash)
 The project should work on common Linux distributions and/or OSX.
 - If the project requires external platform dependencies, they should be available as a Docker container so the project can be easily tested.
+### Summary
+This Dockerfile is used to create a Docker image for a Python-based project, focusing on installing dependencies, copying necessary files, and executing a sequence of scripts and tests.
+
+Base Image:
+
+FROM python:3.9-slim: Uses the official slim Python 3.9 image, which provides a minimal Python environment, helping reduce the image size.
+Working Directory:
+
+WORKDIR /app: Sets the working directory within the container to /app, where all project files will be located.
+Dependencies:
+
+COPY requirements.txt .: Copies the requirements.txt file, containing the necessary Python libraries, into the container.
+RUN pip install --no-cache-dir -r requirements.txt: Installs the dependencies specified in requirements.txt without caching, saving space in the final image.
+Project Files:
+
+COPY . .: Copies all project files (scripts and data files) from the host machine’s directory to the container’s /app directory.
+Execution:
+
+CMD ["bash", "-c", "python Step1.py && python Step2.py && python Step3.py && python Step4.py && python Step5.py && pytest Test1.py"]: Sets the command to sequentially execute Step1.py through Step5.py followed by pytest to run the test file Test1.py. This ensures all processing steps and tests are run when the container starts.
+  
 
 
 ## Best Practices Implemented
