@@ -105,3 +105,27 @@ Once the data is successfully loaded, it calls the count_per_brand function to o
 Finally, it prints a confirmation message indicating that the brand counts have been successfully written to the output file.
 #### if __name__ == "__main__":
 This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
+
+### Step4.py
+
+#### sort_bicycles(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+This function takes a list of dictionaries (representing bicycle data) as input and sorts it based on two criteria: price in GBP and weight in kilograms.
+It uses Python's built-in sorted function with a custom sorting key defined by a lambda function:
+The sorting first considers the price_gbp field. If this field is missing, it assigns a value of positive infinity to ensure those entries appear last.
+The secondary sorting criterion is weight_kg, similarly handling missing values by assigning them positive infinity.
+After sorting, it constructs a new list (sorted_output) that includes only the model_id, price_gbp, and weight_kg for each bicycle.
+The function returns the list of sorted bicycles.
+
+#### write_data_to_file(data: List[Dict[str, Any]], output_file: str) -> None:
+This function writes the sorted bicycle data (a list of dictionaries) to a specified JSON file.
+The output data is formatted with an indentation of 4 spaces for better readability.
+
+#### main() -> None:
+This is the main function that manages the script's execution.
+It specifies the paths for the input and output files.
+The function attempts to read the cleaned data from cleaned_data.json. If the file is not found or contains invalid JSON, it handles the exceptions and prints an appropriate error message.
+Once the data is successfully loaded, it calls the sort_bicycles function to obtain the sorted list and then writes this data to sorted_bicycles.json.
+Finally, it prints a confirmation message indicating that the sorted bicycles have been successfully written to the output file.
+
+####if __name__ == "__main__":
+This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
