@@ -86,3 +86,22 @@ Finally, it prints a confirmation message indicating that the filtering operatio
 
 #### if __name__ == "__main__":
 This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
+
+###Step3.py
+
+#### count_per_brand(data: List[Dict[str, Any]]) -> Dict[str, int]:
+This function takes a list of dictionaries (representing bicycle data) as input and counts the occurrences of each brand.
+It initializes an empty dictionary, brand_count, to store the brand names as keys and their respective counts as values.
+The function iterates through each entry in the data, retrieves the brand, and increments its count in the brand_count dictionary.
+It returns the dictionary containing the counts of bicycles for each brand.
+#### write_data_to_file(data: Dict[str, int], output_file: str) -> None:
+This function writes the provided brand count data (a dictionary) to a specified JSON file.
+The data is formatted with an indentation of 4 spaces for improved readability.
+#### main() -> None:
+This is the main function that orchestrates the script's execution.
+It specifies the paths for the input and output files.
+The function attempts to read the cleaned data from cleaned_data.json. If the file is not found or contains invalid JSON, it handles the exceptions and prints an appropriate error message.
+Once the data is successfully loaded, it calls the count_per_brand function to obtain the brand counts and then writes this data to brand_counts.json.
+Finally, it prints a confirmation message indicating that the brand counts have been successfully written to the output file.
+#### if __name__ == "__main__":
+This line checks if the script is being run as the main module and, if so, calls the main() function to execute the defined operations.
