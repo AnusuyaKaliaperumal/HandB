@@ -158,8 +158,8 @@ Finally, it logs an informational message confirming the successful writing of t
 This line checks if the script is being executed as the main module and calls the main() function to initiate the processing.
 
 ## Test Case Coverage
-###Python Script--> Test1.py
-###Test Cases Covered
+### Python Script--> Test1.py
+### Test Cases Covered
 1. Data Cleaning
 •	Test: test_clean_bike_data_valid
 Validates that valid bike data is cleaned correctly, ensuring all entries have a model_id and are not missing.
