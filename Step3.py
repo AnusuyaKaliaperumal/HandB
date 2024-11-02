@@ -2,6 +2,7 @@ import json
 from typing import List, Dict, Any
 
 def count_per_brand(data: List[Dict[str, Any]]) -> Dict[str, int]:
+    """Counts the occurrences of each brand in the provided data."""
     brand_count = {}
     for entry in data:
         brand = entry.get("brand")
@@ -10,10 +11,12 @@ def count_per_brand(data: List[Dict[str, Any]]) -> Dict[str, int]:
     return brand_count
 
 def write_data_to_file(data: Dict[str, int], output_file: str) -> None:
+    """Writes the brand count data to a specified output file in JSON format."""
     with open(output_file, "w") as f:
         json.dump(data, f, indent=4)
 
 def main() -> None:
+    """Main function to read data, count brand occurrences, and write the result."""
     input_file = "./cleaned_data.json"
     output_file = "./brand_counts.json"
 
