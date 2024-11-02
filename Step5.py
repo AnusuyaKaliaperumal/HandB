@@ -6,6 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 def transform_price_per_weight(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Transforms the bicycle data by adding a 'price_per_weight' field to each entry."""
     updated_bikes = []
     
     for entry in data:
@@ -23,10 +24,12 @@ def transform_price_per_weight(data: List[Dict[str, Any]]) -> List[Dict[str, Any
     return updated_bikes
 
 def write_data_to_file(data: List[Dict[str, Any]], output_file: str) -> None:
+    """Writes the transformed bicycle data to a specified output file in JSON format."""
     with open(output_file, "w") as file:
         json.dump(data, file, indent=2)
 
 def main() -> None:
+    """Main function to read bicycle data, transform it by calculating price per weight, and write the result."""
     input_file = "./cleaned_data.json"
     output_file = "./transformed_bicycles.json"
 
