@@ -2,6 +2,7 @@ import json
 from typing import List, Dict, Any
 
 def sort_bicycles(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Sorts bicycle data by price (ascending), and then by weight if prices are equal."""
     sorted_bikes = sorted(
         data,
         key=lambda x: (
@@ -18,10 +19,12 @@ def sort_bicycles(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return sorted_output
 
 def write_data_to_file(data: List[Dict[str, Any]], output_file: str) -> None:
+    """Writes sorted bicycle data to a specified output file in JSON format."""
     with open(output_file, "w") as file:
         json.dump(data, file, indent=4)
 
 def main() -> None:
+    """Main function to read bicycle data, sort it by price and weight, and write the result."""
     input_file = "./cleaned_data.json"
     output_file = "./sorted_bicycles.json"
 
