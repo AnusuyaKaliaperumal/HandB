@@ -3,24 +3,13 @@ import logging
 import os
 from typing import List, Dict
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 
 def clean_bike_data(data: List[Dict]) -> List[Dict]:
-    """
-    Cleans and filters the bike data.
-    
-    Parameters:
-        data (List[Dict]): Raw bike data entries.
-    
-    Returns:
-        List[Dict]: Cleaned bike data with unique model IDs.
-    """
+    """Cleans and filters bike data, ensuring unique model IDs and required fields."""
     unique_model_ids = set()
     final_data = []
-
     for entry in data:
-        # Ensure required fields are present
         if (
             entry.get("model_id") is not None
             and entry.get("price_gbp") is not None
@@ -30,15 +19,13 @@ def clean_bike_data(data: List[Dict]) -> List[Dict]:
         ):
             unique_model_ids.add(entry["model_id"])
             final_data.append(entry)
-
     return final_data
 
 def read_data_from_file(file_path: str) -> List[Dict]:
-    """Reads bike data from a JSON file."""
+    """Reads JSON data from the specified file path."""
     if not os.path.exists(file_path):
         logging.error(f"The file {file_path} does not exist.")
         raise FileNotFoundError(f"The file {file_path} does not exist.")
-    
     with open(file_path, "r") as f:
         try:
             data = json.load(f)
@@ -49,7 +36,7 @@ def read_data_from_file(file_path: str) -> List[Dict]:
             raise
 
 def write_data_to_file(data: List[Dict], file_path: str):
-    """Writes cleaned bike data to a JSON file."""
+    """Writes JSON data to the specified file path."""
     try:
         with open(file_path, "w") as f:
             json.dump(data, f, indent=4)
@@ -59,21 +46,15 @@ def write_data_to_file(data: List[Dict], file_path: str):
         raise
 
 def main():
-    # File paths
+    """Main function to read, clean, and write bike data."""
     input_file = "./bike_data.json"
     output_file = "./cleaned_data.json"
-
-
-    # Read the data from the input file
     try:
         data = read_data_from_file(input_file)
-        # Clean the data
         cleaned_data = clean_bike_data(data)
-        # Write the cleaned data to the output file
         write_data_to_file(cleaned_data, output_file)
     except (FileNotFoundError, json.JSONDecodeError, IOError) as e:
         logging.error("An error occurred: %s", e)
 
-# Entry point for the script
 if __name__ == "__main__":
     main()
